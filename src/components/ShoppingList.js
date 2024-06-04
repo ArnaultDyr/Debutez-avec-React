@@ -28,7 +28,7 @@ function ShoppingList({ cart, updateCart }) {
 			<Categories categories={categories} updateCategories={updateCategories}/>
 			<ul className='lmj-plant-list'>
 				{plantList.map(({ id, cover, name, water, light, price, category }) => (
-					categories == category ?
+					categories == category || categories == "none" ?
 					(<div key={id}>
 						<PlantItem
 							cover={cover}

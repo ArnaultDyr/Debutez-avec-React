@@ -12,11 +12,14 @@ function Categories({categories, updateCategories}){
 		<div className='lmj-shopping-list'>
             <label >Choisissez une catégorie : </label>
 			<select onChange={e => updateCategories(e.target.value)}>
-                {/*<option></option>*/}
 				{categoriesMap.map((cat) => (
 					<option key={cat} value={cat}>{cat}</option>
 				))}
 			</select>
+            <input 
+                type="button" 
+                value="Réinitialiser"
+                onClick={() => updateCategories('none')} />
         </div>
     );
 }
